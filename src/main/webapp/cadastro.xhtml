@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>RANG Saúde - Cadastro</title>
+</h:head>
+
+<h:body>
+
+    <h1>RANG Saúde</h1>
+
+    <h2>Cadastro de Unidade de Saúde</h2>
+
+    <h:form>
+
+        <p:outputLabel value="CNES:" />
+        <br />
+
+        <p:inputText value="#{cadastroBean.cnes}" />
+
+        <br /><br />
+
+        <p:outputLabel value="Nome do estabelecimento:" />
+        <br />
+
+        <p:inputText value="#{cadastroBean.nomeEstabelecimento}" />
+
+        <br /><br />
+
+        <p:outputLabel value="CEP inicial:" />
+        <br />
+
+        <p:inputText value="#{cadastroBean.cepInicio}" />
+
+        <br /><br />
+
+        <p:outputLabel value="CEP final:" />
+        <br />
+
+        <p:inputText value="#{cadastroBean.cepFim}" />
+
+        <br /><br />
+
+        <p:commandButton value="Cadastrar"
+                         action="#{cadastroBean.cadastrar}"
+                         ajax="false" />
+<br /><br />
+
+<p:outputLabel value="#{cadastroBean.mensagem}" />
+    </h:form>
+
+</h:body>
+
+</html>
